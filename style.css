@@ -1,0 +1,39 @@
+
+:root{
+    --bgdiv:#EF6262;
+    --t:0px;
+}
+body{
+   
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+    div{
+        width: 100px;height: 50px;
+        border-radius: 50px;
+        border: 5px solid rgb(235, 231, 231);
+        position: relative;
+        background: var(--bgdiv);
+        cursor: pointer;
+    }
+
+    div::after{
+        position: absolute;
+        content: '';
+        top: 1px;bottom: 0;left: 0;right: 0;
+        background: linear-gradient(315deg,#f0f0f0,#cacaca);
+        width: 50px;
+        border-radius: 100%;
+        transition: 0.5s;
+        transform: translateX(var(--t));
+        box-shadow: -5px -5px 9px #bebebe,5px 5px 9px #ffffff;
+    }
+    h2{
+        color: #3F2E3E;
+    }
